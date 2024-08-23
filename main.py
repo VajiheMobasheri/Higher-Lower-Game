@@ -4,6 +4,7 @@ import random
 
 #Define a function to randomly select two celebrities from the list.
 def random_name(famous_people):
+    """Return two random celebrities"""
     random_person_a = random.choice(famous_people)
     random_person_b = random.choice(famous_people)
     return random_person_a, random_person_b
@@ -11,6 +12,7 @@ def random_name(famous_people):
 
 #Define a function to calculate the user's score.
 def calculate_score(random_person_a, random_person_b, guess):
+    """Return True if guess is right and False if not."""
     if (guess == "A" and random_person_a['number of followers on Instagram'] > random_person_b[
         'number of followers on Instagram']) or (
             guess == "B" and random_person_a['number of followers on Instagram'] > random_person_b[
